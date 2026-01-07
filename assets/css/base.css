@@ -1,0 +1,248 @@
+/* ============================================
+   ENGINEERS PAGE - BASE STYLES
+   الأساسيات والتصميم العام لصفحة المهندسين
+============================================ */
+
+/* :root Theme Variables */
+:root {
+    --engineer-primary: #4299e1;
+    --engineer-primary-dark: #3182ce;
+    --engineer-secondary: #f59e0b;
+    --engineer-success: #48bb78;
+    --engineer-danger: #f56565;
+    --engineer-light: #f7fafc;
+    --engineer-dark: #1a202c;
+    --engineer-card-bg: #ffffff;
+    --engineer-border: #e2e8f0;
+    --engineer-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    --engineer-radius: 25px;
+}
+
+/* Dark Mode Variables */
+[data-theme="dark"] {
+    --engineer-primary: #63b3ed;
+    --engineer-primary-dark: #4299e1;
+    --engineer-light: #2d3748;
+    --engineer-dark: #f7fafc;
+    --engineer-card-bg: #4a5568;
+    --engineer-border: #718096;
+    --engineer-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Page Structure */
+body.engineers-page {
+    background: linear-gradient(135deg, var(--engineer-light) 0%, #edf2f7 100%);
+    min-height: 100vh;
+}
+
+.engineers-hero {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 50%, #fca310 100%);
+    padding: 100px 0 60px;
+    position: relative;
+    overflow: hidden;
+    min-height: 400px;
+}
+
+/* Hero Background Pattern */
+.engineers-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    animation: float 20s ease-in-out infinite;
+}
+
+/* Hero Content */
+.engineers-hero h1 {
+    color: var(--engineer-dark);
+    font-weight: 800;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.engineers-hero .lead {
+    color: #4a5568;
+    font-size: 1.25rem;
+    max-width: 600px;
+}
+
+/* Search & Filters Section */
+.search-section {
+    position: relative;
+    z-index: 10;
+    margin-top: -40px;
+}
+
+.search-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(30px);
+    border-radius: var(--engineer-radius);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: var(--engineer-shadow);
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+[data-theme="dark"] .search-container {
+    background: rgba(74, 85, 104, 0.95);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.search-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--engineer-primary), var(--engineer-secondary), var(--engineer-danger));
+}
+
+/* Search Input */
+.search-input {
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid var(--engineer-border);
+    border-radius: 20px;
+    padding: 18px 25px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.search-input:focus {
+    border-color: var(--engineer-primary);
+    box-shadow: 0 0 0 4px rgba(66, 153, 225, 0.15), 
+                0 10px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    background: white;
+}
+
+/* Filter Select */
+.filter-select {
+    border-radius: 15px;
+    padding: 15px 20px;
+    font-weight: 500;
+    border: 2px solid #f1f5f9;
+    background: var(--engineer-card-bg);
+    color: var(--engineer-dark);
+    transition: all 0.3s ease;
+}
+
+.filter-select:focus {
+    border-color: var(--engineer-primary);
+    box-shadow: 0 0 0 4px rgba(66, 153, 225, 0.1);
+}
+
+/* Search Results Info */
+.search-results-info {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--engineer-primary);
+    background: linear-gradient(135deg, #ebf8ff, #bee3f8);
+    padding: 12px 20px;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 0 5px 15px rgba(66, 153, 225, 0.2);
+}
+
+/* Favorites Section */
+.favorites-section {
+    background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 50%, #f6ad55 100%);
+    border-radius: 30px;
+    padding: 60px 40px;
+    position: relative;
+    overflow: hidden;
+    margin: 60px -30px;
+}
+
+[data-theme="dark"] .favorites-section {
+    background: linear-gradient(135deg, #742a6d 0%, #9f1239 50%, #dc2626 100%);
+}
+
+.favorites-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.5; }
+}
+
+/* Search Stats */
+.search-stats {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.search-stats .stat {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    padding: 20px 30px;
+    border-radius: 50px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    color: var(--engineer-dark);
+    transition: all 0.3s ease;
+    min-width: 180px;
+}
+
+.search-stats .stat:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+    border-color: var(--engineer-primary);
+}
+
+/* Responsive Base */
+@media (max-width: 768px) {
+    .engineers-hero {
+        padding: 80px 0 40px;
+    }
+    
+    .search-container {
+        padding: 25px 20px;
+        margin: 0 -15px;
+    }
+    
+    .favorites-section {
+        margin: 40px -15px;
+        padding: 40px 20px;
+    }
+    
+    .search-stats {
+        gap: 10px;
+    }
+    
+    .search-stats .stat {
+        min-width: 140px;
+        padding: 15px 20px;
+    }
+}

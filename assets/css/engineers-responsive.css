@@ -1,0 +1,413 @@
+/* ============================================
+   ENGINEERS PAGE - RESPONSIVE STYLES
+   التجاوبية لصفحة المهندسين
+============================================ */
+
+/* Extra Large Devices (≥1400px) */
+@media (min-width: 1400px) {
+    .engineers-hero {
+        padding: 140px 0 80px;
+    }
+    
+    .search-container {
+        padding: 50px;
+    }
+    
+    .engineer-card {
+        max-width: 380px;
+        margin: 0 auto;
+    }
+}
+
+/* Large Devices (1200px - 1399px) */
+@media (max-width: 1399.98px) {
+    .hero-title {
+        font-size: 3.2rem;
+    }
+    
+    .search-stats .stat {
+        min-width: 170px;
+    }
+}
+
+/* Medium Devices (992px - 1199px) */
+@media (max-width: 1199.98px) {
+    .engineers-hero {
+        padding: 110px 0 50px;
+    }
+    
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .search-stats {
+        gap: 15px;
+    }
+    
+    .stat {
+        min-width: 160px;
+        padding: 15px 25px;
+    }
+    
+    .search-container {
+        padding: 35px;
+    }
+    
+    .engineer-card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Small Devices (768px - 991px) */
+@media (max-width: 991.98px) {
+    .engineers-hero {
+        padding: 100px 0 40px;
+        margin-top: 66px;
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: 2.4rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .search-stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .stat {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+    
+    .search-container {
+        padding: 25px 20px;
+        margin: 0 -15px;
+        border-radius: 20px;
+    }
+    
+    .search-input-group {
+        margin-bottom: 10px;
+    }
+    
+    .filter-select {
+        margin-bottom: 10px;
+    }
+    
+    .engineer-card:hover {
+        transform: translateY(-5px) scale(1.01);
+    }
+    
+    .engineer-avatar {
+        font-size: 4rem;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .action-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .favorites-section {
+        margin: 40px -15px;
+        padding: 40px 20px;
+        border-radius: 25px;
+    }
+    
+    .print-btn {
+        bottom: 20px;
+        left: 20px;
+    }
+}
+
+/* Extra Small Devices (576px - 767px) */
+@media (max-width: 767.98px) {
+    .engineers-hero {
+        padding: 90px 0 30px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        margin: 0 !important;
+    }
+    
+    .search-form .row > div {
+        margin-bottom: 15px;
+    }
+    
+    .search-input, .filter-select {
+        font-size: 1rem;
+        padding: 15px 20px;
+    }
+    
+    .engineer-avatar {
+        font-size: 3.5rem;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+    }
+    
+    .engineer-meta .badge {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .stars {
+        font-size: 1.2rem;
+    }
+    
+    .action-buttons .btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+        min-height: 40px;
+    }
+    
+    .btn-text {
+        margin-right: 5px;
+    }
+    
+    .footer .row > div {
+        margin-bottom: 30px;
+    }
+}
+
+/* Very Small Devices (<576px) */
+@media (max-width: 575.98px) {
+    .engineers-hero {
+        padding: 80px 0 20px;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .search-container {
+        padding: 20px 15px;
+        margin: 0 -10px;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .section-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .engineer-card {
+        margin: 0 -5px 15px;
+        border-radius: 20px;
+    }
+    
+    .engineer-avatar {
+        font-size: 3rem;
+    }
+    
+    .availability-badge {
+        top: 10px;
+        left: 10px;
+        padding: 4px 10px;
+        font-size: 0.7rem;
+    }
+    
+    .action-buttons .btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .btn-text {
+        display: none;
+    }
+    
+    .empty-favorites {
+        padding: 40px 15px;
+    }
+    
+    .empty-favorites i {
+        font-size: 3rem;
+    }
+    
+    .empty-favorites h4 {
+        font-size: 1.2rem;
+    }
+    
+    .print-btn {
+        width: 40px;
+        height: 40px;
+        bottom: 15px;
+        left: 15px;
+    }
+    
+    .print-btn:hover {
+        width: 100px;
+    }
+}
+
+/* Landscape Orientation */
+@media (max-height: 600px) and (orientation: landscape) {
+    .engineers-hero {
+        padding: 100px 0 30px;
+        min-height: auto;
+    }
+    
+    .engineer-card {
+        margin-bottom: 15px;
+    }
+    
+    .card-img-top {
+        height: 150px;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .engineer-card:hover {
+        transform: none;
+    }
+    
+    .stat:hover {
+        transform: none;
+    }
+    
+    .action-buttons .btn:hover {
+        transform: none;
+    }
+    
+    .action-buttons .btn {
+        min-height: 50px;
+        padding: 12px 20px;
+    }
+    
+    .search-input, .filter-select {
+        font-size: 16px; /* Prevents iOS zoom */
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .engineer-card {
+        border: 2px solid var(--engineer-dark);
+    }
+    
+    .action-buttons .btn {
+        border: 2px solid currentColor;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .engineer-card,
+    .stat,
+    .action-buttons .btn {
+        transition: none !important;
+    }
+    
+    .engineer-card:hover {
+        transform: none;
+    }
+    
+    .animate-bounce,
+    .animate__animated {
+        animation: none !important;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .search-section,
+    .hero-buttons,
+    .action-buttons,
+    .theme-toggle,
+    .print-btn,
+    .footer,
+    .modal,
+    .advanced-filters {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+        font-size: 12pt;
+    }
+    
+    .engineers-hero {
+        background: white !important;
+        color: black !important;
+        padding: 20px 0 !important;
+        margin-top: 0 !important;
+    }
+    
+    .engineer-card {
+        break-inside: avoid;
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        margin-bottom: 15px;
+    }
+    
+    .engineer-card::before {
+        display: none;
+    }
+    
+    .card-img-top {
+        display: none;
+    }
+    
+    .action-buttons {
+        display: none;
+    }
+    
+    .engineer-description {
+        max-height: none;
+        -webkit-line-clamp: unset;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: black !important;
+    }
+    
+    a {
+        color: black !important;
+        text-decoration: none !important;
+    }
+    
+    .badge {
+        border: 1px solid black !important;
+        background: white !important;
+        color: black !important;
+    }
+}

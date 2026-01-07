@@ -1,0 +1,204 @@
+/* ============================================
+   RESPONSIVE UTILITIES
+   تحسينات التجاوبية العامة للمشروع
+============================================ */
+
+/* Extra Large Devices */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+/* Large Devices */
+@media (max-width: 1200px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .search-stats .stat {
+        min-width: 160px;
+    }
+}
+
+/* Medium Devices */
+@media (max-width: 992px) {
+    .hero-section {
+        padding-top: 120px;
+        text-align: center;
+    }
+    
+    .hero-stats {
+        justify-content: center;
+    }
+    
+    .engineers-grid .col-lg-4 {
+        width: 50%;
+    }
+    
+    .search-container .row {
+        flex-direction: column;
+    }
+    
+    .search-container .col-md-4,
+    .search-container .col-md-3,
+    .search-container .col-md-2 {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+/* Small Devices */
+@media (max-width: 768px) {
+    .navbar-brand span {
+        display: none;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .engineers-grid .col-lg-4,
+    .engineers-grid .col-md-6 {
+        width: 100%;
+    }
+    
+    .search-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .search-stats .stat {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .favorites-section {
+        border-radius: 20px;
+        padding: 40px 20px;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .feature-card {
+        padding: 25px 20px;
+    }
+    
+    .engineer-avatar {
+        font-size: 3.5rem;
+    }
+    
+    .action-buttons .btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .timeline-content {
+        padding: 20px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .search-section,
+    .hero-buttons,
+    .action-buttons,
+    .theme-toggle {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .engineer-card {
+        break-inside: avoid;
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+    }
+}
+
+/* Dark Mode Adjustments for Mobile */
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+        background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .btn-primary,
+    .btn-success,
+    .add-favorite {
+        border: 2px solid black !important;
+    }
+    
+    .engineer-card {
+        border: 2px solid var(--engineer-dark);
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .engineer-card:hover {
+        transform: none;
+    }
+    
+    .search-stats .stat:hover {
+        transform: none;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .engineer-card:hover {
+        transform: none;
+    }
+    
+    .action-buttons .btn {
+        min-height: 50px;
+        padding: 12px 20px;
+    }
+    
+    .search-input,
+    .filter-select {
+        font-size: 16px; /* Prevents iOS zoom */
+    }
+}
+
+/* Landscape Orientation */
+@media (max-height: 600px) and (orientation: landscape) {
+    .hero-section {
+        min-height: auto;
+        padding: 80px 0 40px;
+    }
+    
+    .engineers-hero {
+        padding: 60px 0 30px;
+        min-height: 300px;
+    }
+}

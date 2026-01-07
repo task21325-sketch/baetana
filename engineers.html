@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بيتنا - المهندسون والمقاولون الموثوقون</title>
+    
+    <!-- Bootstrap 5 RTL -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts - Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Animate.css للحركات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+
+ 
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="engineers-page" data-page="engineers">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-lg" id="mainNav">
+        <div class="container">
+            <!-- Brand Logo -->
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+                <div class="logo-icon me-2">
+                    <i class="fas fa-home fa-lg"></i>
+                </div>
+                <span class="brand-text">بيتنا</span>
+            </a>
+            
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" 
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="تبديل التنقل">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navigation Items -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-home me-1"></i> الرئيسية
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="timeline.html">
+                            <i class="fas fa-road me-1"></i> المراحل
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calculator.html">
+                            <i class="fas fa-calculator me-1"></i> الحاسبة
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="engineers.html" aria-current="page">
+                            <i class="fas fa-users me-1"></i> المهندسون
+                        </a>
+                    </li>
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link" href="#favoritesSection">
+                            <i class="fas fa-heart me-1"></i> المفضلة
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- Dark Mode Toggle -->
+                <div class="theme-toggle-container ms-3">
+                    <button id="themeToggle" class="btn btn-outline-light d-flex align-items-center" 
+                            aria-label="تبديل الوضع الليلي">
+                        <i class="fas fa-sun theme-icon me-2"></i>
+                        <span class="theme-text d-none d-md-inline">الوضع النهاري</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Engineers Hero Section -->
+    <header class="engineers-hero">
+        <div class="container position-relative">
+            <div class="row align-items-center py-5">
+                <!-- Hero Content -->
+                <div class="col-lg-7 col-md-6 mb-5 mb-md-0">
+                    <h1 class="display-4 fw-bold mb-4 text-dark">
+                        <i class="fas fa-user-hard-hat text-primary me-3"></i>
+                        ابحث عن أفضل المهندسين
+                    </h1>
+                    <p class="lead mb-4 text-dark">
+                        منصتنا توفر لك قائمة بـ <span class="fw-bold text-primary">15 مهندسًا ومقاولًا موثوقًا</span> 
+                        في فلسطين. ابحث واختر الأفضل لمنزلك بكل ثقة.
+                    </p>
+                    
+                    <!-- Quick Stats -->
+                    <div class="search-stats">
+                        <div class="stat">
+                            <div class="stat-icon">
+                                <i class="fas fa-search fa-lg"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number">بحث فوري</div>
+                                <div class="stat-label">باسم أو تخصص</div>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-icon bg-warning">
+                                <i class="fas fa-star fa-lg"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number">4.8/5</div>
+                                <div class="stat-label">تقييم متوسط</div>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-icon bg-danger">
+                                <i class="fas fa-heart fa-lg"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number">مفضلة</div>
+                                <div class="stat-label">حفظ المفضلة</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Actions -->
+                    <div class="hero-actions mt-4">
+                        <a href="#engineersGrid" class="btn btn-primary btn-lg me-3 animate__animated animate__pulse animate__infinite">
+                            <i class="fas fa-eye me-2"></i> استعرض الكل
+                        </a>
+                        <button class="btn btn-outline-primary btn-lg" id="scrollToFavorites">
+                            <i class="fas fa-heart me-2"></i> المفضلة
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Hero Image -->
+                <div class="col-lg-5 col-md-6 text-center">
+                    <div class="hero-image-container position-relative">
+                        <img src="https://images.unsplash.com/photo-1558618047-3c8?w=500&fit=crop" 
+                             alt="مهندسون ومقاولون محترفون" 
+                             class="img-fluid rounded-4 engineer-hero-img">
+                        <div class="floating-badge bg-primary text-white p-3 rounded-4 shadow">
+                            <i class="fas fa-check-circle fa-2x mb-2"></i>
+                            <div class="badge-text fw-bold">مراجعة وموثوقية</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator text-center mt-5">
+                <a href="#searchSection" class="text-dark scroll-link">
+                    <i class="fas fa-chevron-down fa-2x animate-bounce"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search & Filters Section -->
+    <section class="search-section py-5" id="searchSection">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xxl-10 col-xl-12">
+                    <div class="search-container animate__animated animate__fadeInUp">
+                        <!-- Section Title -->
+                        <div class="section-header text-center mb-5">
+                            <h2 class="section-title fw-bold">
+                                <i class="fas fa-filter text-primary me-2"></i>
+                                ابحث عن المهندس المناسب
+                            </h2>
+                            <p class="section-subtitle text-muted">
+                                استخدم الفلاتر للعثور على المهندس الذي يتناسب مع احتياجاتك
+                            </p>
+                        </div>
+                        
+                        <!-- Search Form -->
+                        <form id="searchForm" class="search-form">
+                            <div class="row g-4 align-items-end">
+                                <!-- Quick Search -->
+                                <div class="col-lg-4 col-md-6">
+                                    <label for="quickSearch" class="form-label fw-bold mb-2">
+                                        <i class="fas fa-search me-1"></i> البحث السريع
+                                    </label>
+                                    <div class="input-group search-input-group">
+                                        <span class="input-group-text bg-light border-end-0">
+                                            <i class="fas fa-search text-muted"></i>
+                                        </span>
+                                        <input type="text" 
+                                               class="form-control search-input border-start-0" 
+                                               id="quickSearch" 
+                                               placeholder="ابحث بالاسم، التخصص، أو المدينة..."
+                                               aria-label="بحث عن مهندس">
+                                        <button class="btn btn-outline-secondary clear-search" type="button" 
+                                                id="clearSearch" title="مسح البحث">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <!-- City Filter -->
+                                <div class="col-lg-3 col-md-6">
+                                    <label for="cityFilter" class="form-label fw-bold mb-2">
+                                        <i class="fas fa-map-marker-alt me-1"></i> المدينة
+                                    </label>
+                                    <select class="form-select filter-select" id="cityFilter">
+                                        <option value="">جميع المدن</option>
+                                        <option value="نابلس">نابلس</option>
+                                        <option value="الخليل">الخليل</option>
+                                        <option value="غزة">غزة</option>
+                                        <option value="رام الله">رام الله</option>
+                                    </select>
+                                </div>
+                                
+                                <!-- Specialty Filter -->
+                                <div class="col-lg-3 col-md-6">
+                                    <label for="specialtyFilter" class="form-label fw-bold mb-2">
+                                        <i class="fas fa-briefcase me-1"></i> التخصص
+                                    </label>
+                                    <select class="form-select filter-select" id="specialtyFilter">
+                                        <option value="">جميع التخصصات</option>
+                                        <option value="إنشائي">إنشائي</option>
+                                        <option value="كهرباء">كهرباء</option>
+                                        <option value="سباكة">سباكة</option>
+                                        <option value="ديكور">ديكور</option>
+                                    </select>
+                                </div>
+                                
+                                <!-- Action Buttons -->
+                                <div class="col-lg-2 col-md-6">
+                                    <div class="d-grid gap-2">
+                                        <button type="button" class="btn btn-primary btn-search" id="searchBtn">
+                                            <i class="fas fa-search me-2"></i> بحث
+                                        </button>
+                                        <button type="button" class="btn btn-outline-secondary" id="resetFilters">
+                                            <i class="fas fa-redo me-2"></i> إعادة ضبط
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Advanced Filters (Collapsible) -->
+                            <div class="advanced-filters mt-4">
+                                <button class="btn btn-link text-decoration-none p-0" 
+                                        type="button" 
+                                        data-bs-toggle="collapse" 
+                                        data-bs-target="#moreFilters"
+                                        aria-expanded="false"
+                                        aria-controls="moreFilters">
+                                    <i class="fas fa-sliders-h me-1"></i>
+                                    <span>فلاتر متقدمة</span>
+                                    <i class="fas fa-chevron-down ms-1"></i>
+                                </button>
+                                
+                                <div class="collapse mt-3" id="moreFilters">
+                                    <div class="card card-body border-0 bg-light">
+                                        <div class="row g-3">
+                                            <div class="col-md-4">
+                                                <label class="form-label fw-bold">التقييم الأدنى</label>
+                                                <input type="range" class="form-range" min="0" max="5" step="0.5" 
+                                                       id="ratingFilter" value="0">
+                                                <div class="d-flex justify-content-between">
+                                                    <small>0</small>
+                                                    <small id="ratingValue">0+</small>
+                                                    <small>5</small>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="form-label fw-bold">عدد المشاريع</label>
+                                                <select class="form-select" id="projectsFilter">
+                                                    <option value="">أي عدد</option>
+                                                    <option value="20">20+ مشروع</option>
+                                                    <option value="40">40+ مشروع</option>
+                                                    <option value="60">60+ مشروع</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="form-label fw-bold">التصفية حسب</label>
+                                                <select class="form-select" id="sortBy">
+                                                    <option value="rating">التقييم (الأعلى أولاً)</option>
+                                                    <option value="projects">المشاريع (الأكثر أولاً)</option>
+                                                    <option value="name">الاسم (أ-ي)</option>
+                                                    <option value="city">المدينة</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        
+                        <!-- Search Results Info -->
+                        <div class="search-results-info mt-4">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="badge bg-primary rounded-pill px-3 py-2">
+                                        <i class="fas fa-users me-1"></i>
+                                        <span id="resultsCount">15</span> مهندس
+                                    </span>
+                                    <small class="text-muted ms-2" id="filterInfo">يعرض جميع المهندسين</small>
+                                </div>
+                                <div class="sort-options">
+                                    <button class="btn btn-sm btn-outline-primary" id="toggleView">
+                                        <i class="fas fa-th-large"></i>
+                                        <span class="d-none d-md-inline"> تغيير العرض</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Engineers Grid Section -->
+    <section class="engineers-grid py-5 bg-light" id="engineersGrid">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header text-center mb-5">
+                <h2 class="section-title fw-bold">
+                    <i class="fas fa-users-cog text-primary me-2"></i>
+                    المهندسون والمقاولون
+                </h2>
+                <p class="section-subtitle text-muted">
+                    اختر من بين أفضل المهندسين المؤهلين والخبراء في مجالهم
+                </p>
+            </div>
+            
+            <!-- Loading State -->
+            <div id="loadingEngineers" class="text-center py-5">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">جاري التحميل...</span>
+                </div>
+                <p class="text-muted mt-3">جاري تحميل قائمة المهندسين...</p>
+            </div>
+            
+            <!-- Engineers Grid -->
+            <div class="row g-4" id="engineersContainer">
+                <!-- Engineers will be populated by JavaScript -->
+            </div>
+            
+            <!-- No Results Message -->
+            <div id="noResults" class="text-center py-5 d-none">
+                <i class="fas fa-search fa-4x text-muted mb-4"></i>
+                <h4 class="text-muted">لم يتم العثور على مهندسين</h4>
+                <p class="text-muted">حاول تغيير معايير البحث أو استخدم فلاتر مختلفة</p>
+                <button class="btn btn-outline-primary" id="showAllEngineers">
+                    <i class="fas fa-redo me-2"></i> عرض جميع المهندسين
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Favorites Section -->
+    <section class="favorites-section py-5" id="favoritesSection">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2 class="section-title fw-bold text-white">
+                    <i class="fas fa-heart text-danger me-2"></i>
+                    المهندسون المفضلون
+                </h2>
+                <p class="section-subtitle text-white-50">
+                    قائمة المهندسين الذين حفظتهم كمفضلين للرجوع إليهم لاحقاً
+                </p>
+            </div>
+            
+            <!-- Favorites Container -->
+            <div class="row g-4" id="favoritesContainer">
+                <!-- Favorites will be populated by JavaScript -->
+            </div>
+            
+            <!-- Empty Favorites State -->
+            <div id="emptyFavorites" class="text-center py-5">
+                <div class="empty-favorites">
+                    <i class="fas fa-heart-broken fa-4x text-muted mb-4"></i>
+                    <h4 class="text-muted mb-3">لا توجد مهندسين مفضلين</h4>
+                    <p class="text-muted mb-4">
+                        أضف مهندسين إلى المفضلة بالضغط على زر 
+                        <i class="fas fa-heart text-danger mx-1"></i> في بطاقة المهندس
+                    </p>
+                    <a href="#engineersGrid" class="btn btn-primary">
+                        <i class="fas fa-users me-2"></i> استعرض المهندسين
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Modal -->
+    <div class="modal fade contact-modal" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">
+                        <i class="fas fa-phone-alt me-2"></i> اتصل بالمهندس
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="engineer-info text-center mb-4">
+                        <div class="engineer-avatar mb-3">
+                            <span id="modalEngineerAvatar">👨‍🔧</span>
+                        </div>
+                        <h4 id="modalEngineerName">المهندس محمد أبو عيشة</h4>
+                        <div class="engineer-meta mb-3">
+                            <span class="badge bg-primary" id="modalEngineerSpecialty">إنشائي</span>
+                            <span class="badge bg-success" id="modalEngineerCity">نابلس</span>
+                        </div>
+                        <div class="rating mb-3">
+                            <span class="stars" id="modalEngineerRating">★★★★★</span>
+                            <small class="text-muted">(<span id="modalEngineerRatingValue">5.0</span>/5)</small>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-details">
+                        <h6 class="mb-3">معلومات التواصل:</h6>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action contact-phone">
+                                <i class="fas fa-phone text-success me-3"></i>
+                                <div>
+                                    <div class="fw-bold">رقم الهاتف</div>
+                                    <div class="text-muted" id="modalEngineerPhone">0591234567</div>
+                                </div>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action contact-email">
+                                <i class="fas fa-envelope text-primary me-3"></i>
+                                <div>
+                                    <div class="fw-bold">البريد الإلكتروني</div>
+                                    <div class="text-muted" id="modalEngineerEmail">engineer@example.com</div>
+                                </div>
+                            </a>
+                            <div class="list-group-item">
+                                <i class="fas fa-map-marker-alt text-danger me-3"></i>
+                                <div>
+                                    <div class="fw-bold">العنوان</div>
+                                    <div class="text-muted" id="modalEngineerAddress">نابلس، فلسطين</div>
+                                </div>
+                            </div>
+                            <div class="list-group-item">
+                                <i class="fas fa-briefcase text-warning me-3"></i>
+                                <div>
+                                    <div class="fw-bold">المشاريع المكتملة</div>
+                                    <div class="text-muted" id="modalEngineerProjects">47 مشروع</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-actions mt-4">
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-success btn-lg contact-action" data-action="call">
+                                <i class="fas fa-phone-alt me-2"></i> اتصل الآن
+                            </button>
+                            <button class="btn btn-outline-primary" onclick="printEngineerInfo()">
+                                <i class="fas fa-print me-2"></i> طباعة المعلومات
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Print Button -->
+    <button class="print-btn btn btn-primary d-print-none" onclick="window.print()" 
+            title="طباعة قائمة المهندسين">
+        <i class="fas fa-print fa-lg"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="mb-4 text-white">
+                        <i class="fas fa-home me-2"></i> بيتنا
+                    </h5>
+                    <p class="text-white-50">
+                        منصة شاملة لإعادة إعمار المنازل الفلسطينية. نوفر لك الأدوات والموارد اللازمة لإعادة بناء منزلك بكل ثقة.
+                    </p>
+                    <div class="social-links mt-4">
+                        <a href="#" class="text-white-50 me-3">
+                            <i class="fab fa-facebook fa-lg"></i>
+                        </a>
+                        <a href="#" class="text-white-50 me-3">
+                            <i class="fab fa-twitter fa-lg"></i>
+                        </a>
+                        <a href="#" class="text-white-50">
+                            <i class="fab fa-instagram fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="mb-4 text-white">روابط سريعة</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="index.html" class="text-white-50 text-decoration-none">
+                                <i class="fas fa-arrow-left me-2"></i> الرئيسية
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="timeline.html" class="text-white-50 text-decoration-none">
+                                <i class="fas fa-arrow-left me-2"></i> مراحل الإعمار
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="calculator.html" class="text-white-50 text-decoration-none">
+                                <i class="fas fa-arrow-left me-2"></i> حاسبة التكاليف
+                            </a>
+                        </li>
+                        <li>
+                            <a href="engineers.html" class="text-white-50 text-decoration-none">
+                                <i class="fas fa-arrow-left me-2"></i> المهندسون
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4">
+                    <h5 class="mb-4 text-white">اتصل بنا</h5>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-3">
+                            <i class="fas fa-map-marker-alt me-2"></i>
+                            فلسطين، جميع المدن
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-phone me-2"></i>
+                            0599-123-456
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope me-2"></i>
+                            info@baytna.ps
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-5 bg-white-50">
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0 text-white-50">
+                        &copy; 2024 بيتنا. جميع الحقوق محفوظة.
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0 text-white-50">
+                        تم التطوير بكل ❤️ لفلسطين
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script src="assets/js/main.js"></script>
+    
+ <script src="engineers-data.js"></script>
+
+
+    <!-- في نهاية body، قبل إغلاق </body> -->
+<script id="engineersData" type="application/json">
+[
+    {
+        "id": 1,
+        "name": "المهندس محمد أبو عيشة",
+        "specialty": "إنشائي",
+        "city": "نابلس",
+        "rating": 4.9,
+        "projects": 47,
+        "avatar": "👨‍🔧",
+        "phone": "0591234567",
+        "email": "mohammed.abuisha@engineer.com",
+        "address": "نابلس - شارع الجامعة",
+        "experience": 12,
+        "availability": "متاح",
+        "description": "مهندس إنشائي متخصص في إعادة الإعمار مع 12 سنة خبرة في ترميم المنازل المتضررة",
+        "priceRange": "متوسط إلى مرتفع",
+        "languages": ["العربية", "الإنجليزية"],
+        "certifications": ["مهندس إنشائي معتمد", "شهادة السلامة العامة"],
+        "workingHours": "8:00 صباحاً - 5:00 مساءً",
+        "responseTime": "أقل من 24 ساعة"
+    },
+    {
+        "id": 2,
+        "name": "المهندسة فاطمة الشوااردة",
+        "specialty": "ديكور",
+        "city": "نابلس",
+        "rating": 4.8,
+        "projects": 32,
+        "avatar": "👩‍💼",
+        "phone": "0592345678",
+        "email": "fatima.shawwaf@designer.com",
+        "address": "نابلس - حي الطيرة",
+        "experience": 8,
+        "availability": "متاح",
+        "description": "مصممة ديكور متخصصة في التصميم الداخلي للمنازل المعاد إعمارها",
+        "priceRange": "متوسط",
+        "languages": ["العربية", "الإنجليزية", "الفرنسية"],
+        "certifications": ["دبلوم تصميم داخلي", "شهادة ألوان معتمدة"],
+        "workingHours": "9:00 صباحاً - 6:00 مساءً",
+        "responseTime": "أقل من 12 ساعة"
+    },
+    {
+        "id": 3,
+        "name": "المهندس أحمد الزعب",
+        "specialty": "كهرباء",
+        "city": "الخليل",
+        "rating": 4.7,
+        "projects": 65,
+        "avatar": "⚡",
+        "phone": "0593456789",
+        "email": "ahmad.alzaab@electrician.com",
+        "address": "الخليل - شارع السلام",
+        "experience": 15,
+        "availability": "مشغول",
+        "description": "مهندس كهرباء متخصص في أنظمة الكهرباء للمنازل الجديدة والمعاد إعمارها",
+        "priceRange": "اقتصادي",
+        "languages": ["العربية"],
+        "certifications": ["مهندس كهرباء معتمد", "شهادة السلامة الكهربائية"],
+        "workingHours": "7:00 صباحاً - 4:00 مساءً",
+        "responseTime": "أقل من 48 ساعة"
+    },
+    {
+        "id": 4,
+        "name": "المهندس خالد الشيخ علي",
+        "specialty": "سباكة",
+        "city": "غزة",
+        "rating": 5.0,
+        "projects": 28,
+        "avatar": "💧",
+        "phone": "0594567890",
+        "email": "khaled.sheikh@plumber.com",
+        "address": "غزة - حي الشجاعية",
+        "experience": 10,
+        "availability": "متاح",
+        "description": "خبير سباكة معتمد، متخصص في أنظمة المياه والصرف الصحي للمنازل",
+        "priceRange": "اقتصادي إلى متوسط",
+        "languages": ["العربية"],
+        "certifications": ["شهادة سباكة معتمدة", "شهادة أنظمة الصرف الصحي"],
+        "workingHours": "8:00 صباحاً - 5:00 مساءً",
+        "responseTime": "أقل من 6 ساعات"
+    },
+    {
+        "id": 5,
+        "name": "المهندسة لين الطويل",
+        "specialty": "إنشائي",
+        "city": "رام الله",
+        "rating": 4.9,
+        "projects": 39,
+        "avatar": "🏗️",
+        "phone": "0595678901",
+        "email": "leen.altawcel@structural.com",
+        "address": "رام الله - البيرة",
+        "experience": 11,
+        "availability": "متاح",
+        "description": "مهندسة إنشائية متخصصة في التصميم الهيكلي الآمن للمنازل",
+        "priceRange": "مرتفع",
+        "languages": ["العربية", "الإنجليزية", "الإسبانية"],
+        "certifications": ["مهندسة إنشائية معتمدة", "شهادة مقاومة الزلازل"],
+        "workingHours": "9:00 صباحاً - 6:00 مساءً",
+        "responseTime": "أقل من 24 ساعة"
+    },
+    {
+        "id": 6,
+        "name": "المهندس عمر الشريف",
+        "specialty": "كهرباء",
+        "city": "نابلس",
+        "rating": 4.6,
+        "projects": 52,
+        "avatar": "🔌",
+        "phone": "0596789012",
+        "email": "omar.alshareef@electric.com",
+        "address": "نابلس - شارع فيصل",
+        "experience": 13,
+        "availability": "متاح",
+        "description": "فني كهرباء متخصص في التركيبات الكهربائية الحديثة والطاقة الشمسية",
+        "priceRange": "متوسط",
+        "languages": ["العربية", "الإنجليزية"],
+        "certifications": ["فني كهرباء معتمد", "شهادة تركيب أنظمة الطاقة الشمسية"],
+        "workingHours": "8:00 صباحاً - 5:00 مساءً",
+        "responseTime": "أقل من 18 ساعة"
+    },
+    {
+        "id": 7,
+        "name": "المهندسة سارة الجعبري",
+        "specialty": "ديكور",
+        "city": "غزة",
+        "rating": 4.8,
+        "projects": 41,
+        "avatar": "🎨",
+        "phone": "0597890123",
+        "email": "sara.aljaabari@interior.com",
+        "address": "غزة - حي الرمال",
+        "experience": 9,
+        "availability": "مشغول",
+        "description": "مصممة ديكور وخبيرة ألوان، متخصصة في تجديد المنازل القديمة",
+        "priceRange": "متوسط إلى مرتفع",
+        "languages": ["العربية", "الإنجليزية"],
+        "certifications": ["دبلوم ألوان وتنسيق", "شهادة تصميم الفضاءات الصغيرة"],
+        "workingHours": "10:00 صباحاً - 7:00 مساءً",
+        "responseTime": "أقل من 36 ساعة"
+    },
+    {
+        "id": 8,
+        "name": "المهندس ياسر البرغوثي",
+        "specialty": "إنشائي",
+        "city": "الخليل",
+        "rating": 4.9,
+        "projects": 73,
+        "avatar": "👷",
+        "phone": "0598901234",
+        "email": "yaser.albarghouthi@construction.com",
+        "address": "الخليل - حي واد الهرية",
+        "experience": 18,
+        "availability": "متاح",
+        "description": "مهندس إنشائي ذو خبرة طويلة في بناء وإعمار المنازل المتضررة",
+        "priceRange": "مرتفع",
+        "languages": ["العربية", "الإنجليزية", "العبرية"],
+        "certifications": ["مهندس إنشائي متقدم", "شهادة إدارة المشاريع"],
+        "workingHours": "7:00 صباحاً - 4:00 مساءً",
+        "responseTime": "أقل من 12 ساعة"
+    },
+    {
+        "id": 9,
+        "name": "المهندس زياد الخضري",
+        "specialty": "سباكة",
+        "city": "رام الله",
+        "rating": 4.7,
+        "projects": 19,
+        "avatar": "🚿",
+        "phone": "0599012345",
+        "email": "ziad.alkhadri@plumbing.com",
+        "address": "رام الله - الماصيون",
+        "experience": 6,
+        "availability": "متاح",
+        "description": "سباك معتمد، متخصص في أنظمة السباكة الحديثة والصديقة للبيئة",
+        "priceRange": "اقتصادي",
+        "languages": ["العربية"],
+        "certifications": ["شهادة سباكة حديثة", "شهادة ترشيد استهلاك المياه"],
+        "workingHours": "8:00 صباحاً - 5:00 مساءً",
+        "responseTime": "أقل من 8 ساعات"
+    },
+    {
+        "id": 10,
+        "name": "المهندسة نور الزعب",
+        "specialty": "كهرباء",
+        "city": "نابلس",
+        "rating": 5.0,
+        "projects": 36,
+        "avatar": "💡",
+        "phone": "0590123456",
+        "email": "noor.alzaab@electrical.com",
+        "address": "نابلس - حي المخفية",
+        "experience": 8,
+        "availability": "متاح",
+        "description": "مهندسة كهرباء متخصصة في الأنظمة الذكية والطاقة المتجددة",
+        "priceRange": "متوسط",
+        "languages": ["العربية", "الإنجليزية", "الألمانية"],
+        "certifications": ["مهندسة كهرباء ذكية", "شهادة أنظمة المنازل الذكية"],
+        "workingHours": "9:00 صباحاً - 6:00 مساءً",
+        "responseTime": "أقل من 24 ساعة"
+    },
+    {
+        "id": 11,
+        "name": "المهندس رامي الشبّانة",
+        "specialty": "ديكور",
+        "city": "غزة",
+        "rating": 4.8,
+        "projects": 44,
+        "avatar": "🏠",
+        "phone": "0591234560",
+        "email": "rami.alshabana@design.com",
+        "address": "غزة - حي التفاح",
+        "experience": 10,
+        "availability": "متاح",
+        "description": "مصمم ديكور متخصص في الفضاءات الصغيرة والتصميم الوظيفي",
+        "priceRange": "اقتصادي إلى متوسط",
+        "languages": ["العربية", "الإنجليزية"],
+        "certifications": ["دبلوم تصميم وظيفي", "شهادة تصميم الفضاءات الصغيرة"],
+        "workingHours": "10:00 صباحاً - 7:00 مساءً",
+        "responseTime": "أقل من 24 ساعة"
+    },
+    {
+        "id": 12,
+        "name": "المهندسة هدى العوّاد",
+        "specialty": "إنشائي",
+        "city": "الخليل",
+        "rating": 4.9,
+        "projects": 58,
+        "avatar": "🔨",
+        "phone": "0592345601",
+        "email": "huda.alawwad@engineer.com",
+        "address": "الخليل - شارع عين سارة",
+        "experience": 14,
+        "availability": "مشغول",
+        "description": "مهندسة إنشائية متخصصة في المباني المقاومة للزلازل",
+        "priceRange": "مرتفع",
+        "languages": ["العربية", "الإنجليزية"],
+        "certifications": ["مهندسة مقاومة الزلازل", "شهادة السلامة الإنشائية المتقدمة"],
+        "workingHours": "8:00 صباحاً - 5:00 مساءً",
+        "responseTime": "أقل من 48 ساعة"
+    },
+    {
+        "id": 13,
+        "name": "المهندس طارق الزّمل",
+        "specialty": "سباكة",
+        "city": "رام الله",
+        "rating": 4.7,
+        "projects": 27,
+        "avatar": "🛠️",
+        "phone": "0593456012",
+        "email": "tareq.alzamel@plumber.com",
+        "address": "رام الله - بيتونيا",
+        "experience": 7,
+        "availability": "متاح",
+        "description": "سباك متخصص في إصلاح أنظمة السباكة التالفة في المنازل القديمة",
+        "priceRange": "اقتصادي",
+        "languages": ["العربية"],
+        "certifications": ["شهادة إصلاح الأنظمة القديمة", "شهادة ترشيد المياه"],
+        "workingHours": "8:00 صباحاً - 5:00 مساءً",
+        "responseTime": "أقل من 6 ساعات"
+    },
+    {
+        "id": 14,
+        "name": "المهندس باسل الخطيب",
+        "specialty": "كهرباء",
+        "city": "نابلس",
+        "rating": 4.8,
+        "projects": 61,
+        "avatar": "🌩️",
+        "phone": "0594560123",
+        "email": "basel.alkhatib@electric.com",
+        "address": "نابلس - حي طلوزة",
+        "experience": 16,
+        "availability": "متاح",
+        "description": "خبير كهرباء معتمد، متخصص في أنظمة الأمان والإنذار الكهربائية",
+        "priceRange": "متوسط إلى مرتفع",
+        "languages": ["العربية", "الإنجليزية"],
+        "certifications": ["خبير أنظمة أمان", "شهادة أنظمة الإنذار الكهربائية"],
+        "workingHours": "8:00 صباحاً - 5:00 مساءً",
+        "responseTime": "أقل من 12 ساعة"
+    },
+    {
+        "id": 15,
+        "name": "المهندسة ريم السّمّري",
+        "specialty": "ديكور",
+        "city": "غزة",
+        "rating": 4.9,
+        "projects": 33,
+        "avatar": "✨",
+        "phone": "0595671234",
+        "email": "reem.alsamari@interior.com",
+        "address": "غزة - حي الشيخ رضوان",
+        "experience": 7,
+        "availability": "متاح",
+        "description": "مصممة ديكور متخصصة في التصميم التراثي والحديث",
+        "priceRange": "متوسط",
+        "languages": ["العربية", "الإنجليزية", "الإيطالية"],
+        "certifications": ["دبلوم تصميم تراثي", "شهادة تنسيق الأثاث"],
+        "workingHours": "10:00 صباحاً - 7:00 مساءً",
+        "responseTime": "أقل من 24 ساعة"
+    }
+]
+</script>
+   
+</body>
+</html>

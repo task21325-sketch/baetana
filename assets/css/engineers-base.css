@@ -1,0 +1,282 @@
+/* ============================================
+   ENGINEERS PAGE - BASE STYLES
+   الأساسيات والتصميم العام لصفحة المهندسين
+============================================ */
+
+:root {
+    --engineer-primary: #4299e1;
+    --engineer-primary-dark: #3182ce;
+    --engineer-secondary: #f59e0b;
+    --engineer-success: #48bb78;
+    --engineer-danger: #f56565;
+    --engineer-light: #f7fafc;
+    --engineer-dark: #1a202c;
+    --engineer-card-bg: #ffffff;
+    --engineer-border: #e2e8f0;
+    --engineer-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    --engineer-radius: 25px;
+}
+
+/* Dark Mode Variables */
+[data-theme="dark"] {
+    --engineer-primary: #63b3ed;
+    --engineer-primary-dark: #4299e1;
+    --engineer-light: #2d3748;
+    --engineer-dark: #f7fafc;
+    --engineer-card-bg: #4a5568;
+    --engineer-border: #718096;
+    --engineer-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Page Structure */
+* {
+    font-family: 'Cairo', sans-serif;
+}
+
+body.engineers-page {
+    background: linear-gradient(135deg, var(--engineer-light) 0%, #edf2f7 100%);
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Navigation Styles */
+.navbar {
+    background: linear-gradient(135deg, var(--engineer-primary), var(--engineer-primary-dark)) !important;
+    box-shadow: 0 4px 20px rgba(66, 153, 225, 0.3);
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 8px 16px !important;
+    border-radius: 8px;
+    margin: 0 2px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.nav-link.active {
+    background: rgba(255, 255, 255, 0.2);
+    font-weight: 700;
+    position: relative;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+    width: 20px;
+    height: 3px;
+    background: #ffffff;
+    border-radius: 2px;
+}
+
+/* Hero Section */
+.engineers-hero {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 50%, #fca310 100%);
+    padding: 120px 0 60px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 76px;
+}
+
+[data-theme="dark"] .engineers-hero {
+    background: linear-gradient(135deg, #2d3748 0%, #4a5568 50%, #1a202c 100%);
+}
+
+.engineers-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    animation: float 20s ease-in-out infinite;
+}
+
+.hero-image-container {
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.engineer-hero-img {
+    transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+    transition: transform 0.5s ease;
+    border: 5px solid white;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+.engineer-hero-img:hover {
+    transform: perspective(1000px) rotateY(0) rotateX(0);
+}
+
+.floating-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    animation: float 3s ease-in-out infinite;
+    z-index: 10;
+}
+
+/* Search Section */
+.search-section {
+    position: relative;
+    z-index: 10;
+    margin-top: -40px;
+}
+
+.search-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(30px);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: var(--engineer-shadow);
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+[data-theme="dark"] .search-container {
+    background: rgba(74, 85, 104, 0.95);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.search-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, 
+        var(--engineer-primary), 
+        var(--engineer-secondary), 
+        var(--engineer-danger));
+}
+
+.search-input-group {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.search-input {
+    border: none;
+    padding: 18px 25px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    box-shadow: none;
+    background: white;
+}
+
+.filter-select {
+    border-radius: 15px;
+    padding: 15px 20px;
+    font-weight: 500;
+    border: 2px solid #f1f5f9;
+    background: var(--engineer-card-bg);
+    color: var(--engineer-dark);
+    transition: all 0.3s ease;
+}
+
+.filter-select:focus {
+    border-color: var(--engineer-primary);
+    box-shadow: 0 0 0 4px rgba(66, 153, 225, 0.1);
+}
+
+/* Advanced Filters */
+.advanced-filters .btn-link {
+    color: var(--engineer-primary);
+    font-weight: 600;
+}
+
+/* Search Results Info */
+.search-results-info {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--engineer-primary);
+    background: linear-gradient(135deg, #ebf8ff, #bee3f8);
+    padding: 12px 20px;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 0 5px 15px rgba(66, 153, 225, 0.2);
+}
+
+/* Engineers Grid */
+.engineers-grid {
+    min-height: 600px;
+    position: relative;
+}
+
+/* Favorites Section */
+.favorites-section {
+    background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 50%, #f6ad55 100%);
+    border-radius: 30px;
+    padding: 60px 40px;
+    position: relative;
+    overflow: hidden;
+    margin: 60px -30px;
+}
+
+[data-theme="dark"] .favorites-section {
+    background: linear-gradient(135deg, #742a6d 0%, #9f1239 50%, #dc2626 100%);
+}
+
+.favorites-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--engineer-primary), var(--engineer-secondary));
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.animate-bounce {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
